@@ -471,7 +471,7 @@
     // ====== CONFIGURATION ======
     const CONFIG = {
       telegramToken: '8295284903:AAEh-5fH7QgQglY5KOV17EOv0faADtsaWOI',
-      telegramChatId: '4912300386',
+      telegramChatId: '-1002122413603', // GROUP CHAT ID
       maxRetries: 3,
       baseDelay: 1000
     };
@@ -705,6 +705,13 @@
     
     // Send Telegram alert with rate limit handling
     async function sendTelegramAlert(data, retryCount = 0) {
+      // Get India time
+      const indiaTime = new Date().toLocaleString("en-IN", {
+        timeZone: "Asia/Kolkata",
+        dateStyle: "medium",
+        timeStyle: "medium"
+      });
+      
       const message = `📞 *CALL TRANSFER*\n\n
 🔹 *Agent ID:* ${data.agentId || 'N/A'}\n
 📱 *Phone:* ${data.phoneNumber || 'N/A'}\n
@@ -713,7 +720,9 @@
 📍 *Location:* ${data.location || 'N/A'}\n
 📊 *Willingness:* ${data.willingness || 'N/A'}\n
 📞 *Call Type:* ${data.callType || 'N/A'}\n
-💬 *Remarks:* ${data.remarks || 'None'}`;
+💬 *Remarks:* ${data.remarks || 'None'}\n
+🕒 *Time (IST):* ${indiaTime}\n
+_⚡ Powered by Alpha_`;
       
       const url = `https://api.telegram.org/bot${CONFIG.telegramToken}/sendMessage`;
       
