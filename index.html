@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sparkling Call Transfer System</title>
+  <title>Professional Call Transfer System</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <style>
     * {
@@ -14,15 +14,14 @@
     }
     
     body {
-      background: linear-gradient(135deg, #0c1445, #1a1a2e, #16213e);
-      color: white;
+      background: linear-gradient(135deg, #0f172a, #1e293b, #0f172a);
+      color: #e2e8f0;
       min-height: 100vh;
       padding: 20px;
       overflow-x: hidden;
       position: relative;
     }
     
-    /* Animated background */
     .animated-bg {
       position: fixed;
       top: 0;
@@ -31,15 +30,8 @@
       height: 100%;
       z-index: -2;
       background: 
-        radial-gradient(circle at 10% 20%, rgba(67, 97, 238, 0.15) 0%, transparent 20%),
-        radial-gradient(circle at 90% 80%, rgba(76, 201, 240, 0.2) 0%, transparent 20%),
-        radial-gradient(circle at 50% 30%, rgba(76, 201, 240, 0.1) 0%, transparent 30%);
-      animation: bg-pulse 20s infinite alternate;
-    }
-    
-    @keyframes bg-pulse {
-      0% { background-size: 100% 100%; }
-      100% { background-size: 150% 150%; }
+        radial-gradient(circle at 10% 20%, rgba(30, 64, 175, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(76, 201, 240, 0.08) 0%, transparent 20%);
     }
     
     .glitter-overlay {
@@ -53,22 +45,21 @@
     }
     
     .container {
-      max-width: 800px;
+      max-width: 600px;
       margin: 40px auto;
-      background: rgba(15, 20, 40, 0.85);
-      border-radius: 20px;
+      background: rgba(15, 23, 42, 0.92);
+      border-radius: 16px;
       padding: 30px;
       box-shadow: 
-        0 15px 50px rgba(0, 0, 0, 0.5),
-        0 0 40px rgba(76, 201, 240, 0.2);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(76, 201, 240, 0.3);
+        0 10px 30px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(59, 130, 246, 0.15);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(76, 201, 240, 0.15);
       position: relative;
       z-index: 2;
       overflow: hidden;
     }
     
-    /* Shimmer effect on container */
     .container::before {
       content: '';
       position: absolute;
@@ -78,11 +69,11 @@
       height: 200%;
       background: linear-gradient(45deg, 
         transparent, 
-        rgba(76, 201, 240, 0.1), 
+        rgba(76, 201, 240, 0.05), 
         transparent, 
-        rgba(67, 97, 238, 0.1), 
+        rgba(59, 130, 246, 0.05), 
         transparent);
-      animation: shimmer 8s infinite linear;
+      animation: shimmer 10s infinite linear;
       z-index: -1;
     }
     
@@ -97,48 +88,43 @@
       margin-bottom: 20px;
       position: relative;
       z-index: 2;
+      border-bottom: 1px solid rgba(76, 201, 240, 0.2);
     }
     
     .powered-by {
       position: absolute;
       top: 10px;
       right: 20px;
-      background: linear-gradient(45deg, #ff00cc, #333399);
+      background: linear-gradient(45deg, #3b82f6, #6366f1);
       color: white;
       padding: 5px 15px;
       border-radius: 20px;
       font-size: 0.9rem;
       font-weight: bold;
-      box-shadow: 0 0 15px rgba(255, 0, 204, 0.5);
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
       z-index: 3;
     }
     
     h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin: 15px 0;
-      text-shadow: 0 2px 15px rgba(76, 201, 240, 0.8);
-      background: linear-gradient(to right, #4cc9f0, #4361ee, #7209b7);
+      text-shadow: 0 2px 10px rgba(76, 201, 240, 0.3);
+      background: linear-gradient(to right, #93c5fd, #60a5fa, #3b82f6);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
       position: relative;
-      animation: title-glow 3s infinite alternate;
-    }
-    
-    @keyframes title-glow {
-      0% { text-shadow: 0 0 10px rgba(76, 201, 240, 0.7); }
-      100% { text-shadow: 0 0 25px rgba(67, 97, 238, 0.9), 0 0 35px rgba(114, 9, 183, 0.6); }
     }
     
     .status-bar {
       display: flex;
       justify-content: space-between;
-      background: rgba(0, 0, 0, 0.4);
-      padding: 15px 20px;
+      background: rgba(30, 41, 59, 0.6);
+      padding: 12px 20px;
       border-radius: 12px;
       margin-bottom: 30px;
       align-items: center;
-      border: 1px solid rgba(76, 201, 240, 0.2);
+      border: 1px solid rgba(76, 201, 240, 0.1);
       position: relative;
       overflow: hidden;
     }
@@ -150,8 +136,8 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(76, 201, 240, 0.2), transparent);
-      animation: status-shine 3s infinite;
+      background: linear-gradient(90deg, transparent, rgba(76, 201, 240, 0.1), transparent);
+      animation: status-shine 4s infinite;
     }
     
     @keyframes status-shine {
@@ -162,31 +148,31 @@
     .status-item {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       z-index: 1;
+      font-size: 0.95rem;
     }
     
     .status-indicator {
       display: inline-block;
-      width: 12px;
-      height: 12px;
+      width: 10px;
+      height: 10px;
       border-radius: 50%;
-      margin-right: 8px;
-      box-shadow: 0 0 10px currentColor;
+      box-shadow: 0 0 8px currentColor;
     }
     
     .status-connected {
-      background: #4cd97b;
+      background: #4ade80;
       animation: pulse 1.5s infinite;
     }
     
     .status-warning {
-      background: #ffd166;
+      background: #fbbf24;
       animation: pulse 1s infinite;
     }
     
     .status-disconnected {
-      background: #ff6b6b;
+      background: #f87171;
     }
     
     @keyframes pulse {
@@ -195,72 +181,76 @@
       100% { transform: scale(1); opacity: 1; }
     }
     
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    
     .form-group {
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       position: relative;
     }
     
     label {
       display: block;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
       font-weight: 500;
-      font-size: 1.1rem;
-      color: #4cc9f0;
+      font-size: 0.95rem;
+      color: #93c5fd;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
     
     .error-message {
-      color: #ff6b6b;
-      font-size: 0.9rem;
-      margin-top: 5px;
+      color: #f87171;
+      font-size: 0.85rem;
+      margin-top: 4px;
       display: none;
-      text-shadow: 0 0 8px rgba(255, 107, 107, 0.5);
     }
     
-    input, textarea {
+    input, textarea, select {
       width: 100%;
-      padding: 16px 20px;
-      border-radius: 12px;
-      border: 2px solid rgba(76, 201, 240, 0.3);
-      background: rgba(10, 15, 35, 0.7);
-      color: white;
-      font-size: 1.05rem;
+      padding: 14px 16px;
+      border-radius: 10px;
+      border: 1px solid rgba(76, 201, 240, 0.2);
+      background: rgba(15, 23, 42, 0.6);
+      color: #e2e8f0;
+      font-size: 1rem;
       transition: all 0.3s;
     }
     
-    input:focus, textarea:focus {
+    input:focus, textarea:focus, select:focus {
       outline: none;
-      border-color: #4cc9f0;
-      box-shadow: 0 0 15px rgba(76, 201, 240, 0.5);
-      background: rgba(15, 25, 55, 0.8);
+      border-color: #60a5fa;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+      background: rgba(30, 41, 59, 0.7);
     }
     
-    input.invalid, textarea.invalid {
-      border-color: #ff6b6b;
-      box-shadow: 0 0 15px rgba(255, 107, 107, 0.5);
+    input.invalid, textarea.invalid, select.invalid {
+      border-color: #f87171;
+      box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.2);
     }
     
     button {
-      background: linear-gradient(to right, #4cc9f0, #4361ee, #7209b7);
+      background: linear-gradient(to right, #3b82f6, #6366f1);
       color: white;
       border: none;
-      padding: 18px 35px;
-      border-radius: 12px;
-      font-size: 1.2rem;
-      font-weight: bold;
+      padding: 16px 30px;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 600;
       cursor: pointer;
       transition: all 0.3s;
       width: 100%;
-      margin-top: 15px;
+      margin-top: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
-      box-shadow: 0 5px 25px rgba(67, 97, 238, 0.6);
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      gap: 10px;
+      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
       position: relative;
       overflow: hidden;
     }
@@ -274,15 +264,15 @@
       height: 200%;
       background: linear-gradient(45deg, 
         transparent, 
-        rgba(255, 255, 255, 0.3), 
+        rgba(255, 255, 255, 0.2), 
         transparent);
       transform: rotate(45deg);
       transition: all 0.5s;
     }
     
     button:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 35px rgba(114, 9, 183, 0.8);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
     }
     
     button:hover::before {
@@ -297,22 +287,22 @@
       position: fixed;
       bottom: 30px;
       right: 30px;
-      background: linear-gradient(to right, #4cd97b, #38b000);
+      background: linear-gradient(to right, #10b981, #059669);
       color: white;
-      padding: 20px 35px;
-      border-radius: 15px;
-      font-weight: bold;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      padding: 16px 28px;
+      border-radius: 12px;
+      font-weight: 600;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 12px;
       z-index: 100;
       transform: translateY(150px);
       opacity: 0;
       transition: all 0.5s ease;
-      max-width: 500px;
-      backdrop-filter: blur(5px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      max-width: 400px;
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
     }
     
     .notification.show {
@@ -321,124 +311,41 @@
     }
     
     .notification.error {
-      background: linear-gradient(to right, #ff6b6b, #d00000);
+      background: linear-gradient(to right, #ef4444, #dc2626);
     }
     
     .notification.warning {
-      background: linear-gradient(to right, #ffd166, #ff9e00);
+      background: linear-gradient(to right, #f59e0b, #d97706);
     }
     
-    .telegram-preview {
-      background: rgba(30, 45, 90, 0.6);
-      border-radius: 20px;
-      padding: 25px;
-      margin-top: 30px;
-      border: 1px solid rgba(0, 136, 204, 0.3);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .telegram-preview::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: 
-        radial-gradient(circle at top right, rgba(76, 201, 240, 0.1), transparent),
-        radial-gradient(circle at bottom left, rgba(67, 97, 238, 0.1), transparent);
-      z-index: -1;
-    }
-    
-    .telegram-preview h3 {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 20px;
-      color: #4cc9f0;
-      text-shadow: 0 0 10px rgba(76, 201, 240, 0.5);
-    }
-    
-    .telegram-message {
-      background: rgba(0, 30, 60, 0.7);
-      padding: 20px;
-      border-radius: 15px;
-      font-family: monospace;
-      white-space: pre-wrap;
-      line-height: 1.6;
-      border-left: 4px solid #0088cc;
-      box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
-    }
-    
-    /* Sparkle animation for submit button */
     @keyframes sparkle {
-      0% { box-shadow: 0 0 5px #4cc9f0, 0 0 10px #4361ee; }
-      50% { box-shadow: 0 0 20px #4cc9f0, 0 0 30px #7209b7; }
-      100% { box-shadow: 0 0 5px #4cc9f0, 0 0 10px #4361ee; }
+      0% { box-shadow: 0 0 5px #3b82f6, 0 0 10px #6366f1; }
+      50% { box-shadow: 0 0 20px #3b82f6, 0 0 30px #6366f1; }
+      100% { box-shadow: 0 0 5px #3b82f6, 0 0 10px #6366f1; }
     }
     
     button[type="submit"] {
       animation: sparkle 2s infinite;
     }
     
-    .instructions {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 25px;
-      border-left: 4px solid #4cc9f0;
-      position: relative;
-    }
-    
-    .instructions h3 {
-      color: #4cc9f0;
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-shadow: 0 0 8px rgba(76, 201, 240, 0.5);
-    }
-    
-    .instructions ol {
-      padding-left: 25px;
-    }
-    
-    .instructions li {
-      margin-bottom: 12px;
-      position: relative;
-      padding-left: 10px;
-    }
-    
-    .instructions li::before {
-      content: '';
-      position: absolute;
-      left: -15px;
-      top: 8px;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #4cc9f0;
-      box-shadow: 0 0 8px #4cc9f0;
-    }
-    
     .floating-icon {
       position: absolute;
-      font-size: 2rem;
-      opacity: 0.1;
+      font-size: 1.8rem;
+      opacity: 0.08;
       z-index: -1;
+      color: #93c5fd;
     }
     
-    .floating-icon:nth-child(1) { top: 20px; left: 20px; animation: float 15s infinite linear; }
-    .floating-icon:nth-child(2) { top: 30%; right: 10%; animation: float 20s infinite linear reverse; }
+    .floating-icon:nth-child(1) { top: 10%; left: 10%; animation: float 18s infinite linear; }
+    .floating-icon:nth-child(2) { top: 25%; right: 12%; animation: float 22s infinite linear reverse; }
     .floating-icon:nth-child(3) { bottom: 20%; left: 15%; animation: float 25s infinite linear; }
-    .floating-icon:nth-child(4) { bottom: 10%; right: 20%; animation: float 18s infinite linear reverse; }
+    .floating-icon:nth-child(4) { bottom: 15%; right: 20%; animation: float 20s infinite linear reverse; }
     
     @keyframes float {
       0% { transform: translate(0, 0) rotate(0deg); }
-      25% { transform: translate(20px, 20px) rotate(90deg); }
-      50% { transform: translate(0, 40px) rotate(180deg); }
-      75% { transform: translate(-20px, 20px) rotate(270deg); }
+      25% { transform: translate(15px, 15px) rotate(90deg); }
+      50% { transform: translate(0, 30px) rotate(180deg); }
+      75% { transform: translate(-15px, 15px) rotate(270deg); }
       100% { transform: translate(0, 0) rotate(360deg); }
     }
     
@@ -451,6 +358,10 @@
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
+    
+    .call-type {
+      grid-column: span 2;
+    }
   </style>
 </head>
 <body>
@@ -461,66 +372,55 @@
   <canvas class="glitter-overlay" id="glitter-canvas"></canvas>
   
   <!-- Floating icons -->
-  <i class="fas fa-comment-dots floating-icon"></i>
   <i class="fas fa-phone-alt floating-icon"></i>
+  <i class="fas fa-headset floating-icon"></i>
+  <i class="fas fa-comments floating-icon"></i>
   <i class="fas fa-paper-plane floating-icon"></i>
-  <i class="fas fa-bolt floating-icon"></i>
   
   <div class="container">
     <header>
       <div class="powered-by">POWERED BY ALPHA</div>
-      <h1><i class="fas fa-phone-alt"></i> CALL TRANSFER SYSTEM</h1>
-      <p>Telegram Integration with Sparkling UI</p>
+      <h1><i class="fas fa-phone-alt"></i> CALL TRANSFER</h1>
+      <p>Professional Transfer System</p>
     </header>
     
     <div class="status-bar">
       <div class="status-item">
         <span class="status-indicator status-connected"></span>
-        <span id="connection-status">SYSTEM READY</span>
+        <span id="connection-status">READY</span>
       </div>
       <div class="status-item">
-        <i class="fab fa-telegram"></i> Telegram: <span id="telegram-status">Online</span>
+        <i class="fab fa-telegram"></i> <span id="telegram-status">Online</span>
       </div>
       <div class="status-item">
-        <i class="fas fa-bolt"></i> Status: <span id="rate-limit-status">Normal</span>
+        <i class="fas fa-bolt"></i> <span id="rate-limit-status">Normal</span>
       </div>
     </div>
     
-    <!-- Form Container -->
-    <div id="form-container">
-      <div class="instructions">
-        <h3><i class="fas fa-info-circle"></i> How to Use</h3>
-        <ol>
-          <li>Fill in the form with call transfer details</li>
-          <li>Review the Telegram preview to see how the message will look</li>
-          <li>Click "SEND TO TELEGRAM" to send directly to Telegram</li>
-          <li>If rate limited, the system will automatically retry</li>
-        </ol>
-      </div>
-      
-      <form id="intakeForm">
+    <form id="intakeForm">
+      <div class="form-grid">
         <div class="form-group">
           <label for="agentId"><i class="fas fa-user-tie"></i> Agent ID</label>
-          <input type="text" id="agentId" name="agentId" placeholder="Enter your agent ID" required>
-          <div class="error-message" id="agentId-error">Agent ID is required</div>
+          <input type="text" id="agentId" name="agentId" placeholder="Enter agent ID" required>
+          <div class="error-message" id="agentId-error">Agent ID required</div>
         </div>
         
         <div class="form-group">
           <label for="phoneNumber"><i class="fas fa-phone"></i> Phone Number</label>
-          <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Customer phone number" required>
-          <div class="error-message" id="phoneNumber-error">Valid phone number is required</div>
+          <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Customer phone" required>
+          <div class="error-message" id="phoneNumber-error">Valid phone required</div>
         </div>
         
         <div class="form-group">
           <label for="name"><i class="fas fa-user"></i> Customer Name</label>
-          <input type="text" id="name" name="name" placeholder="Customer's name" required>
-          <div class="error-message" id="name-error">Customer name is required</div>
+          <input type="text" id="name" name="name" placeholder="Full name" required>
+          <div class="error-message" id="name-error">Name required</div>
         </div>
         
         <div class="form-group">
-          <label for="age"><i class="fas fa-birthday-cake"></i> Customer Age</label>
+          <label for="age"><i class="fas fa-birthday-cake"></i> Age</label>
           <input type="number" id="age" name="age" placeholder="Age (optional)">
-          <div class="error-message" id="age-error">Age must be a number between 1-120</div>
+          <div class="error-message" id="age-error">Age 1-120</div>
         </div>
         
         <div class="form-group">
@@ -529,32 +429,42 @@
         </div>
         
         <div class="form-group">
-          <label for="willingness"><i class="fas fa-percentage"></i> Willingness (%)</label>
-          <input type="number" id="willingness" name="willingness" placeholder="0-100" min="0" max="100">
-          <div class="error-message" id="willingness-error">Must be between 0-100</div>
-        </div>
-        
-        <div class="form-group">
-          <label for="remarks"><i class="fas fa-comment-alt"></i> Remarks</label>
-          <textarea id="remarks" name="remarks" rows="4" placeholder="Additional notes"></textarea>
-        </div>
-        
-        <button type="submit" id="submitButton">
-          <i class="fas fa-paper-plane"></i> SEND TO TELEGRAM
-        </button>
-      </form>
-      
-      <div class="telegram-preview">
-        <h3><i class="fab fa-telegram"></i> Telegram Preview</h3>
-        <div class="telegram-message" id="telegram-preview">
-          [Telegram message will appear here]
+          <label for="willingness"><i class="fas fa-percentage"></i> Willingness</label>
+          <select id="willingness" name="willingness">
+            <option value="">Select willingness</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+            <option value="Not Interested">Not Interested</option>
+          </select>
         </div>
       </div>
-    </div>
+      
+      <div class="form-group call-type">
+        <label for="callType"><i class="fas fa-headset"></i> Call Type</label>
+        <select id="callType" name="callType" required>
+          <option value="">Select call type</option>
+          <option value="Inbound">Inbound Call</option>
+          <option value="Outbound">Outbound Call</option>
+          <option value="Callback">Callback</option>
+          <option value="Complaint">Complaint</option>
+          <option value="Support">Support Request</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="remarks"><i class="fas fa-comment-alt"></i> Remarks</label>
+        <textarea id="remarks" name="remarks" rows="3" placeholder="Additional notes"></textarea>
+      </div>
+      
+      <button type="submit" id="submitButton">
+        <i class="fas fa-paper-plane"></i> TRANSFER CALL
+      </button>
+    </form>
   </div>
   
   <div class="notification" id="notification">
-    <i class="fas fa-check-circle"></i> Transfer sent to Telegram successfully!
+    <i class="fas fa-check-circle"></i> Transfer completed successfully!
   </div>
 
   <script>
@@ -585,17 +495,17 @@
     class Particle {
       constructor() {
         this.reset();
-        this.size = Math.random() * 3 + 1;
-        this.speed = Math.random() * 0.8 + 0.2;
+        this.size = Math.random() * 2 + 1;
+        this.speed = Math.random() * 0.6 + 0.2;
       }
       
       reset() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.alpha = Math.random() * 0.7 + 0.3;
-        this.color = `hsla(${Math.random() * 360}, 100%, 70%, ${this.alpha})`;
+        this.alpha = Math.random() * 0.5 + 0.3;
+        this.color = `hsla(${200 + Math.random() * 40}, 80%, 70%, ${this.alpha})`;
         this.angle = Math.random() * Math.PI * 2;
-        this.velocity = Math.random() * 0.5 + 0.1;
+        this.velocity = Math.random() * 0.4 + 0.1;
       }
       
       update() {
@@ -615,13 +525,13 @@
         ctx.fill();
         
         // Create glow effect
-        ctx.shadowBlur = 15;
+        ctx.shadowBlur = 10;
         ctx.shadowColor = this.color;
       }
     }
     
     // Create particles
-    for (let i = 0; i < 250; i++) {
+    for (let i = 0; i < 180; i++) {
       particles.push(new Particle());
     }
     
@@ -646,16 +556,12 @@
 
     // ====== APPLICATION LOGIC ======
     const notification = document.getElementById('notification');
-    const telegramPreview = document.getElementById('telegram-preview');
     const submitButton = document.getElementById('submitButton');
     
     // Initialize the page
     function initPage() {
-      updateTelegramPreview();
-      setupFormLivePreview();
-      
       document.getElementById('connection-status').innerHTML = 
-        '<span class="status-indicator status-connected"></span> READY TO SEND DATA';
+        '<span class="status-indicator status-connected"></span> READY';
         
       testTelegramConnection();
     }
@@ -666,38 +572,12 @@
         const telegramTest = await fetch(`https://api.telegram.org/bot${CONFIG.telegramToken}/getMe`);
         if (telegramTest.ok) {
           document.getElementById('telegram-status').textContent = 'Online';
-          document.getElementById('telegram-status').style.color = '#4cd97b';
         } else {
           document.getElementById('telegram-status').textContent = 'Offline';
-          document.getElementById('telegram-status').style.color = '#ff6b6b';
         }
       } catch (error) {
         document.getElementById('telegram-status').textContent = 'Offline';
-        document.getElementById('telegram-status').style.color = '#ff6b6b';
       }
-    }
-    
-    // Generate Telegram message preview
-    function updateTelegramPreview() {
-      const message = `📞 *NEW CALL TRANSFER*
-      
-🔹 *Agent ID:* ${document.getElementById('agentId').value || '[Entered ID]'}
-📱 *Phone:* ${document.getElementById('phoneNumber').value || '[Entered Phone]'}
-👤 *Name:* ${document.getElementById('name').value || '[Entered Name]'}
-🧮 *Age:* ${document.getElementById('age').value || '[Entered Age]'}
-📍 *Location:* ${document.getElementById('location').value || '[Entered Location]'}
-📊 *Willingness:* ${document.getElementById('willingness').value || '[Entered Willingness]'}%
-💬 *Remarks:* ${document.getElementById('remarks').value || '[Entered Remarks]'}`;
-      
-      telegramPreview.textContent = message;
-    }
-    
-    // Live form updates
-    function setupFormLivePreview() {
-      const formInputs = document.querySelectorAll('#intakeForm input, #intakeForm textarea');
-      formInputs.forEach(input => {
-        input.addEventListener('input', updateTelegramPreview);
-      });
     }
     
     // Show notification
@@ -714,7 +594,7 @@
       
       setTimeout(() => {
         notification.classList.remove('show');
-      }, 5000);
+      }, 4000);
     }
     
     // Validate form
@@ -765,17 +645,6 @@
         document.getElementById('age').classList.remove('invalid');
       }
       
-      // Willingness validation
-      const willingness = document.getElementById('willingness').value;
-      if (willingness && (willingness < 0 || willingness > 100)) {
-        document.getElementById('willingness-error').style.display = 'block';
-        document.getElementById('willingness').classList.add('invalid');
-        isValid = false;
-      } else {
-        document.getElementById('willingness-error').style.display = 'none';
-        document.getElementById('willingness').classList.remove('invalid');
-      }
-      
       return isValid;
     }
     
@@ -784,7 +653,7 @@
       e.preventDefault();
       
       if (isSending) {
-        showNotification('⚠️ Please wait - message is being sent', false, true);
+        showNotification('⚠️ Please wait - transfer in progress', false, true);
         return;
       }
       
@@ -800,6 +669,7 @@
         age: document.getElementById('age').value || 'N/A',
         location: document.getElementById('location').value || 'N/A',
         willingness: document.getElementById('willingness').value || 'N/A',
+        callType: document.getElementById('callType').value,
         remarks: document.getElementById('remarks').value || 'None',
         timestamp: new Date().toISOString()
       };
@@ -807,44 +677,42 @@
       try {
         isSending = true;
         submitButton.disabled = true;
-        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin submit-loader"></i> SENDING...';
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin submit-loader"></i> PROCESSING...';
         
         document.getElementById('connection-status').innerHTML = 
-          '<span class="status-indicator status-connected"></span> SENDING TO TELEGRAM...';
+          '<span class="status-indicator status-connected"></span> TRANSFERRING';
         document.getElementById('rate-limit-status').textContent = 'Normal';
-        document.getElementById('rate-limit-status').style.color = '';
         
         await sendTelegramAlert(formData);
         
-        showNotification('✅ Transfer details sent to Telegram successfully!');
+        showNotification('✅ Call transferred successfully!');
         
         this.reset();
         
         document.getElementById('connection-status').innerHTML = 
-          '<span class="status-indicator status-connected"></span> MESSAGE SENT!';
-        
-        updateTelegramPreview();
+          '<span class="status-indicator status-connected"></span> COMPLETED';
         
       } catch (error) {
         showNotification(`⚠️ ${error.message}`, true);
         document.getElementById('connection-status').innerHTML = 
-          `<span class="status-indicator status-disconnected"></span> ${error.message.substring(0, 30)}...`;
+          `<span class="status-indicator status-disconnected"></span> ERROR`;
       } finally {
         isSending = false;
         submitButton.disabled = false;
-        submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> SEND TO TELEGRAM';
+        submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> TRANSFER CALL';
       }
     });
     
     // Send Telegram alert with rate limit handling
     async function sendTelegramAlert(data, retryCount = 0) {
-      const message = `📞 *NEW CALL TRANSFER*\n\n
+      const message = `📞 *CALL TRANSFER*\n\n
 🔹 *Agent ID:* ${data.agentId || 'N/A'}\n
 📱 *Phone:* ${data.phoneNumber || 'N/A'}\n
 👤 *Name:* ${data.name || 'N/A'}\n
 🧮 *Age:* ${data.age || 'N/A'}\n
 📍 *Location:* ${data.location || 'N/A'}\n
-📊 *Willingness:* ${data.willingness || 'N/A'}%\n
+📊 *Willingness:* ${data.willingness || 'N/A'}\n
+📞 *Call Type:* ${data.callType || 'N/A'}\n
 💬 *Remarks:* ${data.remarks || 'None'}`;
       
       const url = `https://api.telegram.org/bot${CONFIG.telegramToken}/sendMessage`;
@@ -871,26 +739,25 @@
               const delay = retryAfter * 1000;
               
               document.getElementById('connection-status').innerHTML = 
-                `<span class="status-indicator status-warning"></span> RATE LIMITED - RETRYING`;
-              document.getElementById('rate-limit-status').textContent = `Retry in ${retryAfter}s`;
-              document.getElementById('rate-limit-status').style.color = '#ffd166';
+                `<span class="status-indicator status-warning"></span> RETRYING`;
+              document.getElementById('rate-limit-status').textContent = `Wait ${retryAfter}s`;
               
-              showNotification(`⚠️ Telegram rate limit hit - retrying in ${retryAfter} seconds`, false, true);
+              showNotification(`⚠️ System busy - retrying in ${retryAfter} seconds`, false, true);
               
               await sleep(delay);
               
               return sendTelegramAlert(data, retryCount + 1);
             } else {
-              throw new Error('Telegram rate limit: Max retries exceeded');
+              throw new Error('Transfer failed: Max retries exceeded');
             }
           } else {
-            throw new Error(`Telegram error: ${result.description}`);
+            throw new Error(`Transfer error: ${result.description}`);
           }
         }
         
         return result;
       } catch (error) {
-        throw new Error(`Telegram connection failed: ${error.message}`);
+        throw new Error(`Transfer failed: ${error.message}`);
       }
     }
     
